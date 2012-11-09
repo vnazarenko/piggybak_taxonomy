@@ -3,13 +3,10 @@ module PiggybakTaxonomy
     def show
       paths = params[:path].split('/')
       @nodes = recursive_path(paths, [])
-      Rails.logger.warn "stephie: #{@nodes.inspect}"
       if @nodes.empty?
         redirect_to main_app.root_url, :status => 301
       elsif @nodes.size != params[:path].split('/').size
-        Rails.logger.warn "stephie: partial match!"
         # redirect to last node
-        #redirect_to nodes.collect { |slug| }.join('/') 
       end
     end
 
