@@ -10,5 +10,9 @@ module PiggybakTaxonomy
     validates_format_of :slug, :with => /^[a-z_]+$/
 
     has_ancestry
+
+    def full_path
+      "parents + #{self.slug}"
+    end
   end
 end

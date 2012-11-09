@@ -1,0 +1,11 @@
+<%= link_to "Home", main_app.root_url %> > 
+<% @nodes.each do |node| -%>
+<% if node == @nodes.last -%>
+<b><%= node.title %></b>
+<% else -%>
+<%= node.title %> >
+<% end -%>
+<% end -%>
+
+<br /><br />
+### Show products here ###
