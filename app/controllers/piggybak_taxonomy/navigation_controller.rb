@@ -2,12 +2,13 @@ module PiggybakTaxonomy
   class NavigationController < ApplicationController
     def show
       paths = params[:path].split('/')
-      @nodes = recursive_path(paths, [])
-      if @nodes.empty?
+      nodes = recursive_path(paths, [])
+      if nodes.empty?
         redirect_to main_app.root_url, :status => 301
-      elsif @nodes.size != params[:path].split('/').size
-        # redirect to last node
+      elsif nodes.size != params[:path].split('/').size
+        redirect_to piggybak_taxonomy_url(:path => nodes.last.nav_path), :status => 301 
       end
+      @node = nodes.last
     end
 
     def recursive_path(paths, nodes)
