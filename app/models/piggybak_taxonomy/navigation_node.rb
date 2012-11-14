@@ -14,13 +14,6 @@ module PiggybakTaxonomy
 
     has_ancestry
 
-    validate :slug_not_page
-    def slug_not_page
-      if self.slug == "page"
-        self.errors.add(:slug, "invalid. 'page' is a reserved navigation indicator.")
-      end
-    end
-
     def nav_path
       "#{self.path.collect { |n| n.slug }.join('/')}"
     end
