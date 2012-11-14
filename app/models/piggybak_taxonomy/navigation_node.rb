@@ -22,7 +22,7 @@ module PiggybakTaxonomy
     end
 
     def recursive_sellables
-      results = self.sellables
+      results = self.sellables.clone
       self.children.each do |child|
         results << child.recursive_sellables
       end
