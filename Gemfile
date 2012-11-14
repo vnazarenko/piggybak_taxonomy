@@ -8,4 +8,5 @@ gemspec
 # jquery-rails is used by the dummy application
 gem "jquery-rails"
 gem "ancestry"
+gem "kaminari"
 gem "piggybak_rails_admin_nestable", '0.0.3'

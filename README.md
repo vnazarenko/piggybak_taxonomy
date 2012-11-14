@@ -7,9 +7,7 @@ Taxonomy support for Piggybak.
 TODO
 ========
 
-* Create ul / li nested view for all taxonomy.
-
-* Add pagination.
+* Add configuration for per page default, forcing unique assignment
 
 
 Copyright

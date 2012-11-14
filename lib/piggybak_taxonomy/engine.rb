@@ -25,6 +25,7 @@ module PiggybakTaxonomy
 
         config.model PiggybakTaxonomy::NavigationNode do
           navigation_label "Extensions"
+          label "Navigation Node"
 
           nestable_tree({ position_field: :position, max_depth: 3 })
           list do

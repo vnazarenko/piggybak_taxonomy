@@ -145,5 +145,6 @@ PLATFORMS
 DEPENDENCIES
   ancestry
   jquery-rails
+  kaminari
   piggybak_rails_admin_nestable (= 0.0.3)
   piggybak_taxonomy!

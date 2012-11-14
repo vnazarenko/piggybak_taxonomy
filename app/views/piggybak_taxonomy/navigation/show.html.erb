@@ -1,7 +1,11 @@
 <%= render :partial => "breadcrumb", :locals => { :final_node => @node, :link_last => false } %>
 
-<% if @node.sellables.any? -%>
-<%= render :partial => "sellable", :collection => @node.sellables %>
+<%= render :partial => "pagination", :locals => { :node => @nodes } %>
+
+<% if @node.recursive_sellables.any? -%>
+<%= render :partial => "sellable", :collection => @node.paginated_sellables(params[:page]) %>
 <% else -%>
 There are no products.
 <% end -%>
+
+<%= render :partial => "pagination", :locals => { :node => @nodes } %>
