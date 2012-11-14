@@ -7,11 +7,11 @@ require "piggybak_taxonomy/version"
 Gem::Specification.new do |s|
   s.name        = "piggybak_taxonomy"
   s.version     = PiggybakTaxonomy::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of PiggybakTaxonomy."
-  s.description = "TODO: Description of PiggybakTaxonomy."
+  s.authors     = ["Steph Skardal"]
+  s.email       = ["steph@endpoint.com"]
+  s.homepage    = "http://www.piggybak.org/"
+  s.summary     = "Piggybak Taxonomy - navigation support for Piggybak."
+  s.description = "Piggybak Taxonomy - navigation support for Piggybak."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["LICENSE", "Rakefile", "README.md"]
 
