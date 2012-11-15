@@ -13,6 +13,12 @@ module PiggybakTaxonomy
       end
     end
 
+    config.before_initialize do
+      Piggybak.config do |config|
+        config.manage_classes << "::PiggybakTaxonomy::NavigationNode"
+      end
+    end
+
     initializer "piggybak_taxonomy.rails_admin_config" do |app|
       RailsAdmin.config do |config|
         config.model PiggybakTaxonomy::SellableTaxonomy do
