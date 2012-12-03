@@ -9,4 +9,4 @@ gemspec
 gem "jquery-rails"
 gem "ancestry"
 gem "kaminari"
-gem "piggybak_rails_admin_nestable", '0.0.3'
+gem "piggybak_rails_admin_nestable", '0.0.4'
