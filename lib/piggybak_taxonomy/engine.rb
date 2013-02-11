@@ -22,8 +22,10 @@ module PiggybakTaxonomy
     initializer "piggybak_taxonomy.rails_admin_config" do |app|
       RailsAdmin.config do |config|
         config.model PiggybakTaxonomy::SellableTaxonomy do
-          label "Sellables"
+          navigation_label "Extensions"
+          label "Navigation Node Sellables"
           edit do
+            field :navigation_node
             field :sellable
             field :sort
           end 

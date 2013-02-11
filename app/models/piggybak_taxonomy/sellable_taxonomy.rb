@@ -9,7 +9,7 @@ module PiggybakTaxonomy
     validates_presence_of :sellable, :sort
 
     def admin_label
-      "#{self.sellable.description.gsub('"', '&quot;')} (#{self.sort})"
+      self.sellable ? "#{self.sellable.description.gsub('"', '&quot;')} (#{self.sort})" : "New"
     end
 
     # TODO: Add as configuration
