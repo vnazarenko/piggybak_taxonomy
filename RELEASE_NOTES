@@ -1,0 +1,4 @@
+0.0.8
+Released: 3.22.2013
+* Admin access of sellable navigation node
+* Attr_accessible fix
