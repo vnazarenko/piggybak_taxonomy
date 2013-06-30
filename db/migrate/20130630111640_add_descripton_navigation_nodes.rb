@@ -4,5 +4,6 @@ class AddDescriptonNavigationNodes < ActiveRecord::Migration
   end
 
   def down
+    remove_column :navigation_nodes, :description
   end
 end
