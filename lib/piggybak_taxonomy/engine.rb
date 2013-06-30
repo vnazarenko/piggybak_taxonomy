@@ -44,6 +44,7 @@ module PiggybakTaxonomy
           edit do
             field :title
             field :slug
+            field :description, :text
             field :sellable_taxonomies do
               active true
               label "Sellables"

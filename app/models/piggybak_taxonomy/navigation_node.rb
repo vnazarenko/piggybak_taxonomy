@@ -5,7 +5,7 @@ module PiggybakTaxonomy
     has_many :sellable_taxonomies, :class_name => "::PiggybakTaxonomy::SellableTaxonomy"
     has_many :sellables, :through => :sellable_taxonomies, :class_name => "::Piggybak::Sellable"
     accepts_nested_attributes_for :sellable_taxonomies, :allow_destroy => true
-    attr_accessible :title, :slug, :position, :sellable_taxonomies_attributes #sellables_ids, :sellables
+    attr_accessible :title, :slug, :position, :sellable_taxonomies_attributes, :description #sellables_ids, :sellables
 
     validates_presence_of :title
     validates_presence_of :slug
